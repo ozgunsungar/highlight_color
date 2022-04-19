@@ -12,7 +12,6 @@ Original file is located at
 import numpy as np
 import cv2
 from google.colab.patches import cv2_imshow
-import matplotlib.pyplot as plt
 import skimage.color
 
 """## Downloading Image"""
