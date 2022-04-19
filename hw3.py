@@ -18,7 +18,7 @@ import skimage.color
 """## Downloading Image"""
 
 #download image
-!wget -O image.jpg https://i.stack.imgur.com/dd9tg.jpg
+!wget -O image.jpg https://raw.githubusercontent.com/ozgunsungar/highlight_color/main/rose.jpg
 
 """## Image Preprocessing"""
 
