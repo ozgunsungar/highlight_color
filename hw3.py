@@ -17,7 +17,7 @@ import skimage.color
 """## Downloading Image"""
 
 #download image
-!wget -O image.jpg https://raw.githubusercontent.com/ozgunsungar/highlight_color/main/rose.jpg
+!wget -O image.jpg https://i.stack.imgur.com/dd9tg.jpg
 
 """## Image Preprocessing"""
 
@@ -104,10 +104,11 @@ histogram_yiq = np.dstack((B,G,R))
 
 
 #normalize the image
+# It's statistically approach but not reliable for image processing. We shouldn't use it
+# mx = np.amax(histogram_yiq)
+# mn = np.amin(histogram_yiq)
+# histogram_yiq = (histogram_yiq - mn) / (mx - mn) * 255
 
-mx = np.amax(histogram_yiq)
-mn = np.amin(histogram_yiq)
-
-histogram_yiq = (histogram_yiq - mn) / (mx - mn) * 255
+histogram_yiq[histogram_yiq<0] = 0 #negative pixels assigned to 0
 
 cv2_imshow(histogram_yiq)
