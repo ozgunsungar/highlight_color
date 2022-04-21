@@ -80,9 +80,10 @@ cv2.imwrite('highlighted_apple.jpg', img_highlighted)
 
 B,G,R = cv2.split(img)
 
-B = cv2.equalizeHist(B)
-G = cv2.equalizeHist(G)
-R = cv2.equalizeHist(R)
+# histogram equalization for true color images
+# B = cv2.equalizeHist(B)
+# G = cv2.equalizeHist(G)
+# R = cv2.equalizeHist(R)
 
 Y = 0.299*R+0.587*G+0.114*B
 I = 0.596*R-0.274*G-0.322*B
